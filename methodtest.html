@@ -31,11 +31,7 @@
 	<script type="text/javascript">
         const date = new Date();
         document.getElementById('date').innerHTML = date;
-        let id = document.getElementById("id").value;
-        let article_name = document.getElementById("article_name").value;
-        let article_body = document.getElementById("article_body").value;
-        var entered_data = JSON.stringify({"id": id, "article_name": article_name, 
-        "article_body": article_body, "date": date});
+  
 
         function renderHTML(data){
             html = '';
@@ -53,6 +49,11 @@
         }
 
         function post() {
+            const id = document.getElementById("id").value;
+            const article_name = document.getElementById("article_name").value;
+            const article_body = document.getElementById("article_body").value;
+            const entered_data = JSON.stringify({"id": id, "article_name": article_name, 
+            "article_body": article_body, "date": date});
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "https://httpbin.org/post");
             xhr.setRequestHeader('Content-Type', 'application/json');
@@ -66,6 +67,11 @@
         }
     
         function get() {
+            const id = document.getElementById("id").value;
+            const article_name = document.getElementById("article_name").value;
+            const article_body = document.getElementById("article_body").value;
+            const entered_data = JSON.stringify({"id": id, "article_name": article_name, 
+            "article_body": article_body, "date": date});
             var xhr = new XMLHttpRequest();
             url = "https://httpbin.org/get?"+entered_data;
             xhr.open("GET", url);
@@ -79,6 +85,11 @@
         }
     
         function put() {
+            const id = document.getElementById("id").value;
+            const article_name = document.getElementById("article_name").value;
+            const article_body = document.getElementById("article_body").value;
+            const entered_data = JSON.stringify({"id": id, "article_name": article_name, 
+            "article_body": article_body, "date": date});
             var xhr = new XMLHttpRequest();
             xhr.open("PUT", "https://httpbin.org/put");
             xhr.setRequestHeader('Content-Type', 'application/json');
@@ -92,6 +103,11 @@
         }
     
         function deletefunc() {
+            const id = document.getElementById("id").value;
+            const article_name = document.getElementById("article_name").value;
+            const article_body = document.getElementById("article_body").value;
+            const entered_data = JSON.stringify({"id": id, "article_name": article_name, 
+            "article_body": article_body, "date": date});
             var xhr = new XMLHttpRequest();
             url = "https://httpbin.org/delete?"+entered_data;
             xhr.open("DELETE", url);
