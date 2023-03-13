@@ -4,6 +4,10 @@
 	<title>methodtest</title>
 </head>
 <body>
+
+    <p><a href ="https://zippy-tulumba-1a23de.netlify.app/methodtest.html">Part1 methodtest.html</a></p>
+    <p><a href ="https://zippy-tulumba-1a23de.netlify.app/webcomponent.html">Part2 webcomponent.html</a></p>
+    <hr>
 	<h1>Method Test</h1>
 	<form>
 		<label for="id">ID:</label>
@@ -63,7 +67,8 @@
     
         function get() {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "https://httpbin.org/get");
+            url = "https://httpbin.org/get?"+entered_data;
+            xhr.open("GET", url);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status === 200) {
                     var response = JSON.parse(xhr.responseText);
@@ -88,7 +93,8 @@
     
         function deletefunc() {
             var xhr = new XMLHttpRequest();
-            xhr.open("DELETE", "https://httpbin.org/delete");
+            url = "https://httpbin.org/delete?"+entered_data;
+            xhr.open("DELETE", url);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status === 200) {
                     var response = JSON.parse(xhr.responseText);
